@@ -33,6 +33,7 @@ try {
 
       const testContainer = core.getInput("test-container");
       const testCommand = core.getInput("test-command");
+      const testDelay = core.getInput("testDelay");
 
       console.log("testContainer", testContainer);
       console.log("testCommand", testCommand);
@@ -53,7 +54,7 @@ try {
               console.log(err.err);
               core.setFailed(`tests failed ${JSON.stringify(err)}`);
             });
-        }, 10000);
+        }, testDelay);
       }
     })
     .catch((err) => {

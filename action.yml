@@ -26,6 +26,10 @@ inputs:
   test-command:
     description: "The command to use to execute tests."
     required: false
+  test-delay:
+    description: "Delay before running test command"
+    required: false
+    default: 10000
 runs:
   using: "node16"
   main: "main.js"
